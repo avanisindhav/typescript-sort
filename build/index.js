@@ -1,5 +1,20 @@
 "use strict";
-const logString = () => {
-    console.log("***************************");
-};
-logString();
+Object.defineProperty(exports, "__esModule", { value: true });
+const NumberCollection_1 = require("./NumberCollection");
+const CharactersCollection_1 = require("./CharactersCollection");
+const LinkedList_1 = require("./LinkedList");
+const numbers = new NumberCollection_1.NumbersCollection([10, 3, -5, 0, 1, 4]);
+numbers.sort();
+console.log("NumbersCollection Sorted: ", numbers.data);
+const strings = new CharactersCollection_1.CharactersCollection("avani");
+strings.sort();
+console.log("CharactersCollection Sorted: ", strings.data);
+const newLink = new LinkedList_1.LinkedList();
+newLink.add(12);
+newLink.add(-1);
+newLink.add(500);
+newLink.add(-10);
+newLink.add(-3);
+newLink.add(4);
+newLink.sort();
+newLink.print();
